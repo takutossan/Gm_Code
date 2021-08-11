@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+}
+
+.top-page-header {
+  width: calc(100vw - 1px);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255,255,255,0.5);
+}
+
+.search-bar-contents {
+  display: flex;
+  justify-content: flex-end;
+  padding: 3px 50px 3px 0;
+  align-items: center;
+}
+
+.logo-icon{
+  width:25vw;
+  padding: 100px 0 0 0px;
+}
+
+.search-form {
+  width: 20vw;
+  height: 1vh;
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.search-form>.input-box {
+  width: 100%;
+  height: 5vh;
+  padding-right: 10px;
+}
+
+.search-button {
+  width: 7vh;
+  border: 0;
+  padding: 10px;
+}
+
+.search-icon {
+  width: 100%;
+}
+
+.nav {
+  font-size: 17px;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 10px 100px 0 0;
+}
+
+
+.lists-right {
+  display: flex;
+  list-style: none;
+  align-items: flex-end;
+}
+
+
+.user-nickname {
+  text-decoration: none;
+  margin-right: 3vw;
+  color: #333333;
+  font-weight: bold;
+}
+
+
+.logout {
+  text-decoration: none;
+  color: #333333;
+}
+
+.login {
+  text-decoration: none;
+  line-height: 29px;
+  margin-right: 3vw;
+  color: #333333;
+}
+
+.sign-up {
+  text-decoration: none;
+  color: #333333;
+}
