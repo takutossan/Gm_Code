@@ -1,4 +1,4 @@
-<%= render "shared/header" %>
+<%= render "devise/shared/header" %>
 <div class='main'>
 
   <div class='title-contents'>
@@ -9,13 +9,21 @@
     </audio>
     
       <p class='service-explain'>
-        お気に入りのコーデをshareしよう!
+        お気に入りのコーデをシェアしよう!
       </p>
     </div>
 
-  <div class='item-contents'>
+  <div class='code-contents'>
     <h2 class='title'>最新のコーデ</h2>
-    <ul class='item-lists'>
-    </ul>
+    <ul class='code-lists'>
+
+    <%= link_to(new_code_path, class: 'code-btn') do %>
+  <span class='code-btn-text'>new code</span>
+<% end %>
+
+  <div class='new-contents'>
+    <h2 class='title'>お知らせ</h2>
+    <div>
+      <audio controls autoplay src="https://res.cloudinary.com/dr47riclr/video/upload/v1628663126/music/%E5%B0%8F%E9%87%8E%E3%81%A1%E3%82%83%E3%82%93%E5%84%AA%E3%81%97%E3%81%95_txlboe.mp3"></audio>
+    </div>
   </div>
-</div>

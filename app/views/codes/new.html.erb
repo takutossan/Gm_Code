@@ -1,0 +1,57 @@
+<div class="codes-post-contents">
+  <header class="codes-post-header">
+    <%= image_tag "logo.PNG", size: '185x50',class:"logo-icon" %>
+
+  </header>
+    <div class="codes-post-main">
+      <%= form_with model: @code, local: true do |f| %>
+
+    <%#= render 'shared/error_messages', model: f.object %>
+
+    <div class="code-upload">
+      <div class="codes-text">
+        コーデ
+        <span class="indispensable">＊</span>
+      </div>
+        <div class="click-upload">
+          <p>
+            クリックしてコーデをアップロード
+          </p>
+            <%= f.file_field :image, id:"code-image" %>
+      </div>
+    </div>
+
+    <div class="items-explain">
+        <div class="weight-bold-text">
+          <h4>コーディネートについて</h4>
+            <span class="indispensable">＊</span>
+        </div>
+          <%= f.text_area :message, class:"code-message", id:"code-info", placeholder:"何か書く...", maxlength:"1000" %>
+    </div>
+  </div>
+  </div>
+
+    <div class="code-uesr-detail">
+      <div class="user-datail">
+        <h4>モデル情報</h4>
+      </div>
+        <div class="form">
+          <div class="height-text">
+            身長
+          </div>
+        <div>
+          <%= f.text_area :text, class:"code-text", id:"code-info" %>
+      </div>
+      <div class="age-text">
+            年齢
+          </div>
+        <div>
+          <%= f.text_area :text, class:"code-text", id:"code-info" %>
+      </div>
+    </div>
+    <div class="code-btn-contents">
+      <%= f.submit "投稿する" ,class:"code-btn" %>
+      <%=link_to 'もどる', root_path, class:"back-btn" %>
+    </div>
+  <% end %>
+</div>

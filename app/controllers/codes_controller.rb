@@ -1,6 +1,8 @@
 class CodesController < ApplicationController
-  before_action :authenticate_user!, only: [:new]
+  before_action :authenticate_user!, only: [:new, :create]
+
   def index
+    @code = Code.all.order('created_at DESC')
   end
 
   def new
