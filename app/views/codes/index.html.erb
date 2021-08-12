@@ -1,4 +1,4 @@
-<%= render "shared/header" %>
+<%= render "devise/shared/header" %>
 <div class='main'>
 
   <div class='title-contents'>
@@ -9,13 +9,46 @@
     </audio>
     
       <p class='service-explain'>
-        お気に入りのコーデをshareしよう!
+        お気に入りのコーデをシェアしよう!
       </p>
     </div>
 
-  <div class='item-contents'>
-    <h2 class='title'>最新のコーデ</h2>
-    <ul class='item-lists'>
-    </ul>
+    <div class='code-contents'>
+      <h2 class='title'>New Code</h2>
+      <ul class='code-lists'>
+
+      <% @code.each do|code| %>
+        
+      <li class='list'>
+        <%= link_to codes_path(code.id) do %>
+        <div class='code-img-content'>
+          <%= image_tag code.image, class: "code-img" if code.image.attached? %>
+       </div>
+        <% end %>
+      <% end %>
+
+    <% if @code.blank? %>
+      <li class='list'>
+        <%= image_tag "title.PNG", class: "code-img" %>
+          <h3 class='item-name'>
+            コーディネートを投稿しよう！
+          </h3>
+        <% end %>
+      </ul>
+    <div class="list-btn">
+      <button>もっと見る</button>
+    </div>
   </div>
 </div>
+
+    <%= link_to(new_code_path, class: 'code-btn') do %>
+  <span class='code-btn-text'>post code</span>
+  <%= image_tag 'camera.png' , size: '100x55' ,class: "code-btn-icon" %>
+<% end %>
+
+  <div class='new-contents'>
+    <h2 class='announces'>お知らせ</h2>
+    <div>
+      <audio controls autoplay src="https://res.cloudinary.com/dr47riclr/video/upload/v1628738609/music/Gm1_dzomgg.mp3"></audio>
+    </div>
+  </div>
