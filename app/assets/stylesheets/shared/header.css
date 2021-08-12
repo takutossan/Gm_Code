@@ -4,7 +4,7 @@
 
 .top-page-header {
     width: 100vw;
-    padding: 2vh 13vw;
+    padding: 3vh 13vw;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -13,7 +13,7 @@
 .search-bar-contents {
   display: flex;
   justify-content: flex-end;
-  padding: 3px 48px 3px 0;
+  padding: 3px 40px 3px 0;
   align-items: center;
 }
 
@@ -52,7 +52,7 @@
   justify-content: flex-end;
   flex-wrap: wrap;
   width: 100%;
-  padding: 16px 96px 0 0;
+  padding: 40px 87px 0 0;
 }
 
 
@@ -111,7 +111,7 @@
 .sign-up {
   text-decoration: none;
   line-height: 20px;
-  margin-right: 1vw;
+  margin-right: 3vw;
   color: #333333;
   font-size: 16px;
 }

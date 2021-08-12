@@ -6,7 +6,7 @@
     <div class="codes-post-main">
       <%= form_with model: @code, local: true do |f| %>
 
-    <%#= render 'shared/error_messages', model: f.object %>
+    <%= render 'devise/shared/error_messages', model: f.object %>
 
     <div class="code-upload">
       <div class="code-topic">
@@ -36,13 +36,13 @@
             コーデタイトル
           </div>
         <div>
-          <%= f.text_area :text, class:"code-text", id:"code-info" %>
+          <%= f.text_area :code_title, class:"code-text", id:"code-info" %>
       </div>
       <div class="bland-detail">
             着用ブランド
           </div>
         <div>
-          <%= f.text_area :text, class:"code-text", id:"code-info" %>
+          <%= f.text_area :brand_name, class:"code-text", id:"code-info" %>
       </div>
     </div>
     <div class="post-btn-contents">

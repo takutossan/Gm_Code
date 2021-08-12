@@ -20,6 +20,6 @@ class CodesController < ApplicationController
 
     private
   def code_params
-    params.require(:code).permit(:image, :message, :height, :age).merge(user_id: current_user.id)
+    params.require(:code).permit(:image, :message, :code_title, :brand_name).merge(user_id: current_user.id)
   end
 end
