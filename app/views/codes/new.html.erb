@@ -1,6 +1,6 @@
 <div class="codes-post-contents">
   <header class="codes-post-header">
-    <%= image_tag "logo.PNG", size: '185x50',class:"logo-icon" %>
+    <%= image_tag "logo.PNG", size: '180x60',class:"logo-icon" %>
 
   </header>
     <div class="codes-post-main">
@@ -9,49 +9,50 @@
     <%#= render 'shared/error_messages', model: f.object %>
 
     <div class="code-upload">
-      <div class="codes-text">
-        コーデ
-        <span class="indispensable">＊</span>
+      <div class="code-topic">
+        new post
       </div>
         <div class="click-upload">
           <p>
             クリックしてコーデをアップロード
+              <span class="indispensable">＊</span>
           </p>
             <%= f.file_field :image, id:"code-image" %>
       </div>
     </div>
 
-    <div class="items-explain">
-        <div class="weight-bold-text">
-          <h4>コーディネートについて</h4>
+    <div class="codes-explain">
+        <div class="code-title-text">
+          <p> コーディネートについて
             <span class="indispensable">＊</span>
+          </p>
         </div>
           <%= f.text_area :message, class:"code-message", id:"code-info", placeholder:"何か書く...", maxlength:"1000" %>
     </div>
-  </div>
-  </div>
 
     <div class="code-uesr-detail">
-      <div class="user-datail">
-        <h4>モデル情報</h4>
-      </div>
         <div class="form">
-          <div class="height-text">
-            身長
+          <div class="code-title-detail">
+            コーデタイトル
           </div>
         <div>
           <%= f.text_area :text, class:"code-text", id:"code-info" %>
       </div>
-      <div class="age-text">
-            年齢
+      <div class="bland-detail">
+            着用ブランド
           </div>
         <div>
           <%= f.text_area :text, class:"code-text", id:"code-info" %>
       </div>
     </div>
-    <div class="code-btn-contents">
-      <%= f.submit "投稿する" ,class:"code-btn" %>
+    <div class="post-btn-contents">
+      <%= f.submit "投稿する" ,class:"post-btn" %>
       <%=link_to 'もどる', root_path, class:"back-btn" %>
     </div>
+    <div>
+      <audio autoplay src="https://res.cloudinary.com/dr47riclr/video/upload/v1628738609/music/Gm2_hhmzaj.mp3"></audio>
+    </div>
+  </div>
+</div>
   <% end %>
 </div>
