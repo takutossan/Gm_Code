@@ -1,0 +1,58 @@
+<div class="codes-post-contents">
+  <header class="codes-post-header">
+    <%= image_tag "logo.PNG", size: '180x60',class:"logo-icon" %>
+
+  </header>
+    <div class="codes-post-main">
+      <%= form_with model: @code, local: true do |f| %>
+
+    <%= render 'devise/shared/error_messages', model: f.object %>
+
+    <div class="code-upload">
+      <div class="code-topic">
+        post correction
+      </div>
+        <div class="click-upload">
+          <p>
+            クリックしてコーデをアップロード
+              <span class="indispensable">＊</span>
+          </p>
+            <%= f.file_field :image, id:"code-image" %>
+      </div>
+    </div>
+
+    <div class="codes-explain">
+        <div class="code-title-text">
+          <p> コーディネートについて
+            <span class="indispensable">＊</span>
+          </p>
+        </div>
+          <%= f.text_area :message, class:"code-message", id:"code-info", placeholder:"何か書く...", maxlength:"1000" %>
+    </div>
+
+    <div class="code-uesr-detail">
+        <div class="form">
+          <div class="code-title-detail">
+            コーデタイトル
+          </div>
+        <div>
+          <%= f.text_area :code_title, class:"code-text", id:"code-info" %>
+      </div>
+      <div class="bland-detail">
+            着用ブランド
+          </div>
+        <div>
+          <%= f.text_area :brand_name, class:"code-text", id:"code-info" %>
+      </div>
+    </div>
+    <div class="post-btn-contents">
+      <%= f.submit "変更する" , class:"correction-btn" %>
+      <%=link_to 'もどる', root_path, class:"back-btn" %>
+    </div>
+    <div>
+      <audio autoplay src="https://res.cloudinary.com/dr47riclr/video/upload/v1628738609/music/Gm2_hhmzaj.mp3"></audio>
+    </div>
+  </div>
+</div>
+  <% end %>
+</div>
