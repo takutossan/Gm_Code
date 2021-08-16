@@ -9,7 +9,7 @@
       <%= image_tag @code.image ,class:"code-box-img" %>
       </div>
       <% if user_signed_in? && current_user.id == @code.user_id %>
-      <%= link_to "商品の編集", root_path, method: :get, class: "code-blue-btn" %>
+      <%= link_to "商品の編集", edit_code_path(@code.id), method: :get, class: "code-blue-btn" %>
       <%= link_to "削除", code_path(@code.id), method: :delete, class:"code-destroy" %>
     <% end %>
 

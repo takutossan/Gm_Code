@@ -1,6 +1,6 @@
 class CodesController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit]
-  before_action :set_code: [:edit, :show]
+  before_action :set_code, only: [:edit, :show, :update]
 
 
     def index
@@ -25,6 +25,15 @@ class CodesController < ApplicationController
     end
 
     def edit
+    end
+
+    def update
+      @code.update(code_params)
+      if @code.save
+        redirect_to root_path
+      else
+        render :edit
+      end
     end
 
 
