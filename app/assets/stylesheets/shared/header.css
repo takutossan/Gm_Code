@@ -52,7 +52,7 @@
   justify-content: flex-end;
   flex-wrap: wrap;
   width: 100%;
-  padding: 40px 87px 0 0;
+  padding: 40px 98px 0 0;
 }
 
 
@@ -66,7 +66,6 @@
 .user-name {
   text-decoration: none;
   color: #333333;
-  line-height: 10px;
   margin-right: 4vw;
   font-size: 16px;
   font-weight: bold;
@@ -75,14 +74,13 @@
 .user-name:hover{
   background-color: #110000;
   color:#FFFFFF;
-  padding:5px;
+  padding:5px 0 ;
 }
 
 
 .logout {
   text-decoration: none;
   color: #333333;
-  line-height: 20px;
   margin-right: 4vw;
   font-size: 16px;
 }
@@ -90,13 +88,12 @@
 .logout:hover{
   background-color: #110000;
   color:#FFFFFF;
-  padding:5px;
+  padding:5px  0 ;
 }
 
 
 .login {
   text-decoration: none;
-  line-height: 20px;
   margin-right: 4vw;
   color: #333333;
   font-size: 16px;
@@ -105,12 +102,11 @@
 .login:hover{
   background-color: #110000;
   color:#FFFFFF;
-  padding:5px;
+  padding:5px 0;
 }
 
 .sign-up {
   text-decoration: none;
-  line-height: 20px;
   margin-right: 3vw;
   color: #333333;
   font-size: 16px;
@@ -119,5 +115,5 @@
 .sign-up:hover{
   background-color: #110000;
   color:#FFFFFF;
-  padding:5px;
+  padding:5px 0;
 }

@@ -1,0 +1,32 @@
+<%= render "devise/shared/header" %>
+
+<div class="code-show">
+  <div class="code-box">
+    <h2 class="code-title">
+      <%= @code.code_title %>
+    </h2>
+    <div class="code-img-content">
+      <%= image_tag @code.image ,class:"code-box-img" %>
+      </div>
+      <% if user_signed_in? && current_user.id == @code.user_id %>
+      <%= link_to "商品の編集", root_path, method: :get, class: "code-blue-btn" %>
+      <%= link_to "削除", code_path(@code.id), method: :delete, class:"code-destroy" %>
+    <% end %>
+
+    <div class="code-explain-box">
+      <span><%= @code.message %></span>
+    </div>
+
+      <div class="comment-box">
+    <form>
+      <textarea class="comment-text"></textarea>
+        <button type="submit" class="comment-btn">
+          <span>コメントする<span>
+        </button>
+    </form>
+  </div>
+  <div>
+    <audio autoplay src="https://res.cloudinary.com/dr47riclr/video/upload/v1628738609/music/Gm3_jdfb5p.mp3"></audio>
+  </div>
+
+  <%#= render "devise/shared/footer" %>

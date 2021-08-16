@@ -53,3 +53,4 @@ production:
   database: Gm_Code_production
   username: Gm_Code
   password: <%= ENV['GM_CODE_DATABASE_PASSWORD'] %>
+  

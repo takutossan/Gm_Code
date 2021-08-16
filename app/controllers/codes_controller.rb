@@ -1,14 +1,17 @@
 class CodesController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create]
+  before_action :authenticate_user!, only: [:new, :create, :edit]
+  before_action :set_code: [:edit, :show]
 
-  def index
-    @code = Code.all.order('created_at DESC')
-  end
 
-  def new
-    @code = Code.new
+    def index
+      @code = Code.all.order('created_at DESC')
+      @codes = Code.page params[:page]
     end
-  
+
+    def new
+      @code = Code.new
+    end
+
     def create
       @code = Code.new(code_params)
       if @code.save
@@ -18,8 +21,20 @@ class CodesController < ApplicationController
       end
     end
 
-    private
-  def code_params
-    params.require(:code).permit(:image, :message, :code_title, :brand_name).merge(user_id: current_user.id)
-  end
+    def show
+    end
+
+    def edit
+    end
+
+
+  private
+
+    def code_params
+      params.require(:code).permit(:image, :message, :code_title, :brand_name).merge(user_id: current_user.id)
+    end
+
+    def set_code
+      @code = Code.find(params[:id])
+    end
 end
