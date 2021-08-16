@@ -1,6 +1,6 @@
 class CodesController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit]
-  before_action :set_code, only: [:edit, :show, :update]
+  before_action :set_code, only: [:edit, :show, :update, :destroy]
 
 
     def index
@@ -33,6 +33,12 @@ class CodesController < ApplicationController
         redirect_to root_path
       else
         render :edit
+      end
+    end
+
+    def destroy
+      if @code.destroy
+        redirect_to root_path
       end
     end
 
