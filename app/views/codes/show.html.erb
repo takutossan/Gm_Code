@@ -2,29 +2,57 @@
 
 <div class="code-show">
   <div class="code-box">
-    <h2 class="code-title">
-      <%= @code.code_title %>
+    <h2 class="code-explain-box">
+      user :
+     <span class="name">
+     <%= link_to @code.user.name, mypage_path(@code.user.id), method: :get, class: "code-mypage-btn" %>
+      </a>
+    </span>
     </h2>
-    <div class="code-img-content">
-      <%= image_tag @code.image ,class:"code-box-img" %>
+      <div class="code-img-content">
+        <%= image_tag @code.image ,class:"code-box-img" %>
       </div>
+
       <% if user_signed_in? && current_user.id == @code.user_id %>
-      <%= link_to "商品の編集", edit_code_path(@code.id), method: :get, class: "code-blue-btn" %>
-      <%= link_to "削除", code_path(@code.id), method: :delete, class:"code-destroy" %>
-    <% end %>
+        <%= link_to "商品の編集", edit_code_path(@code.id), method: :get, class: "code-blue-btn" %>
+        <%= link_to "削除", code_path(@code.id), method: :delete, class:"code-destroy" %>
+      <% end %>
 
-    <div class="code-explain-box">
-      <span><%= @code.message %></span>
-    </div>
+      <h2 class="code-explain-box">＜コーデタイトル＞
+        <%= simple_format @code.code_title %>
+      </h2>
 
-      <div class="comment-box">
-    <form>
-      <textarea class="comment-text"></textarea>
-        <button type="submit" class="comment-btn">
+      <div class="code-explain-box">＜メッセージ＞
+        <%= simple_format @code.message %>
+      </div>
+
+      <div class="code-explain-box">＜着用ブランド＞
+        <%= simple_format @code.brand_name %>
+      </div>
+
+
+    <div class="comment-box">
+      <% if user_signed_in? %>
+        <%= form_with(model: [@code, @comment], local: true) do |f| %>
+          <%= f.text_area :text, class:"comment-text", rows: "2" %>
+          <button type="submit" class="comment-btn">
           <span>コメントする<span>
         </button>
-    </form>
-  </div>
+        <% end %>
+      <% else %>
+        <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p>
+        </strong>
+      <% end %>
+      <div class="comments">
+        <h2>＜コメント一覧＞</h2>
+        <% @comments.each do |comment| %>
+          <p>
+            <%= link_to comment.user.name, mypage_path(@code.user.id), method: :get, class: "code-mypage-btn" %>:
+            <%= comment.text %>
+          </p>
+        <% end %>
+      </div>
+      <%=link_to 'もどる', root_path, class:"root-back-btn" %>
   <div>
     <audio autoplay src="https://res.cloudinary.com/dr47riclr/video/upload/v1628738609/music/Gm3_jdfb5p.mp3"></audio>
   </div>

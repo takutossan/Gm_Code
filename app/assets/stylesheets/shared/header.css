@@ -13,7 +13,7 @@
 .search-bar-contents {
   display: flex;
   justify-content: flex-end;
-  padding: 3px 40px 3px 0;
+  padding: 3px 42px 3px 0;
   align-items: center;
 }
 
@@ -24,7 +24,7 @@
 }
 
 .search-form {
-  width: 20vw;
+  width: 19vw;
   height: 1vh;
   display: flex;
   margin-bottom: 5px;
@@ -52,14 +52,13 @@
   justify-content: flex-end;
   flex-wrap: wrap;
   width: 100%;
-  padding: 40px 98px 0 0;
+  padding: 40px 0 0 0 ;
 }
 
 
 .lists-right {
   display: flex;
-  list-style: none;
-  align-items: flex-end;
+ 
 }
 
 
@@ -81,7 +80,7 @@
 .logout {
   text-decoration: none;
   color: #333333;
-  margin-right: 4vw;
+  margin-right: 3vw;
   font-size: 16px;
 }
 
