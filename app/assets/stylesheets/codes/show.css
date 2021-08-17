@@ -1,20 +1,19 @@
 .code-show {
-  background-color: #FFFFFF;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 5vh 0;
+  background-color: #f5f5f5 ;
+  width: 100vw ;
+  display: flex ;
+  flex-direction: column ;
+  align-items: center ;
+  text-align: center ;
 }
 
 .code-box {
-  background-color: #DDDD;
-  width: 70vw;
-  min-width: 1200px;
-  padding: 10vh 15vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 70vw ;
+  min-width: 1200px ;
+  padding: 2vh ;
+  display: flex ;
+  flex-direction: column ;
+  align-items: center ;
 }
 
 .code-box>.title {
@@ -60,6 +59,7 @@
   margin: 10px 0 ;
   padding: 3px ;
 }
+
 
 .comment-box {
   text-align: center;
