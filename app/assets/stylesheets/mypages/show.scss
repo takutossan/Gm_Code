@@ -5,23 +5,35 @@
   flex-direction: column ;
   align-items: center ;
   text-align: center;
-  font-size: 18px ;
+  font-size: 17px ;
 }
 
 .content-page{
   padding: 2vh 0 ;
 }
 
-.root-back-btn {
+.root-back-button {
   border: 1px solid	#CCCCCC ;
   background-color:	#CCCCCC ;
   color: #FFFFEE ;
-  padding: 15px 40px ;
+  padding: 10px 34px ;
   text-decoration: none ;
   border-radius: 80% ;
-  margin: 0 6px 0 0 ;
   text-align: center ;
   bottom: 10px ;
-  right: 10px ;
+  right: 1300px ;
+  position: fixed ;
+}
+
+.messages-button {
+  border: 1px solid	#CCCCCC ;
+  background-color:	#CCCCCC ;
+  color: #FFFFEE ;
+  padding: 10px 43px ;
+  text-decoration: none ;
+  border-radius: 80% ;
+  text-align: center ;
+  bottom: 10px ;
+  right: 20px ;
   position: fixed ;
 }

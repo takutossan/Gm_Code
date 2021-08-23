@@ -87,7 +87,7 @@
   display: none; 
 }
 .grad-trigger:checked ~ .grad-btn::before {
-  content: "閉じる" 
+  content: "閉じる" ;
 }
 .grad-trigger:checked ~ .grad-item {
   height: auto; 

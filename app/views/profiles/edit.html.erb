@@ -1,0 +1,32 @@
+<% content_for(:title, 'プロフィール') %>
+<div class="profiles">
+  <div class="row">
+  
+      <h1><%= 'プロフィール編集' %></h1>
+    <div class="profile-lists">
+      <%= form_with model: @user, url: profile_path, local: true do |f| %>
+        <%#= render 'devise/shared/error_messages', model: f.object %>
+
+        <div><%= f.label :名前 %></div>
+          <div><%= f.text_field :name, class: "form-control" %></div>
+
+         <div><%= f.label :誕生日 %></div>
+          <div><%= f.text_field :birthday, class: "form-control" %></div>
+       
+        <div><%= f.label :好きなブランド %></div>
+          <div><%= f.text_field :favorite_brand, class: "form-control" %></div>
+        
+        <div><%= f.label :自己紹介 %><div>
+          <div><%= f.text_field :comment, class: "form-control" %></div>
+
+        <div><%= f.label :twitter, 'Twitter URL' %></div>
+          <div><%= f.text_field :twitter, placeholder: "Twitter URL", class: "form-control" %></div>
+
+        <div><%= f.label :instagram, 'Instagram URL' %></div>
+          <div><%= f.text_field :instagram, placeholder: "Instagram URL", class: "form-control" %></div>
+
+        <%= f.submit '完了', class: "primary"%>
+      <% end %>  
+    </div>
+  </div>
+</div>
