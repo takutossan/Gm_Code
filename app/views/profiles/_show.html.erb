@@ -1,0 +1,47 @@
+<% content_for(:title, 'プロフィール') %>
+<div class="profiles">
+  <div class="row">
+    
+      <h1> <%= "プロフィール" %></h1>
+    <div class="profile-table">
+      <table class="table">
+        <tbody>
+          <tr>
+            <th class="table-list">名前</th>
+              <td class ="table-form"><%= @name %></td>
+          </tr>
+          <tr>
+            <th class="table-list">誕生日</th>
+              <td class ="table-form"><%= current_user.birthday %></td>
+          </tr>
+          <tr>
+            <th class="table-list">好きなブランド</th>
+              <td class ="table-form"><%= current_user.favorite_brand %></td>
+          </tr>
+            <th class="table-list">自己紹介</th>
+              <td class ="table-form"><%= current_user.comment %></td>
+          </tr>
+          <div class = "sns-link">
+          <ul class="profile-links">
+            <% if current_user.twitter.present? %>
+              <li class="profile-link">
+                <%= link_to current_user.twitter, target: :_blank do %>
+                  <i class="fab fa-twitter-square"></i>
+                <% end %>
+              </li>
+            <% end %>
+            <% if current_user.instagram.present? %>
+              <li class="profile-link">
+                <%= link_to current_user.instagram, target: :_blank do %>
+                  <i class="fab fa-instagram"></i>
+                <% end %>
+              </li>
+            <% end %>
+            </ul>
+        </div>
+        </tbody>
+      </table>
+    </div>
+    <%=link_to "編集", edit_profile_path, class: 'edit-profile' if current_user.name == @name %>
+  </div>
+</div>

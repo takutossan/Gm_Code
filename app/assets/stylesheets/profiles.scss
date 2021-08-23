@@ -1,0 +1,65 @@
+.edit-profile{
+  border: 1px solid	#CCCCCC ;
+  background-color:	#CCCCCC ;
+  color: #FFFFEE ;
+  padding: 11px 43px ;
+  text-decoration: none ;
+  border-radius: 80% ;
+  text-align: center ;
+  bottom: 10px ;
+  right: 20px ;
+  position: fixed ;
+}
+
+
+.table-list{
+  background-color: #FFFFFF;
+  text-align: start;
+  border: 1px solid #111111;
+  padding: 0 5px 0 0;
+}
+
+.table-form{
+  background-color: #FFFFFF;
+  text-align: start;
+  border: 1px solid #111111;
+  padding: 3px 100px 3px 0;
+}
+
+
+.profile-links {
+  list-style: none;
+  padding-right: 40px;
+  .profile-link {
+    font-size: 50px;
+    display: inline-block;
+    width: 20%;
+    text-align: right;
+    /*Twitter*/
+    .fa-twitter{color:#1da1f2;}
+    /*instagram*/
+    .fa-instagram{color:#e1306c;}
+  }
+}
+
+.profiles {
+  font-family: "Source Sans Pro", Helvetica, Arial, "æ¸¸ã‚´ã‚·ãƒƒã‚¯ä½“", "YuGothic", "ãƒ¡ã‚¤ãƒªã‚ª", "Meiryo", sans-serif;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-width: 500px;
+}
+
+.form-control{
+  width: 100%;
+  text-align: start;
+  padding: 6px 16px 6px 0;
+  border-radius: 5px;
+  border: 1px solid #DDDDDD;
+  font-size: 15px;
+  resize: none;
+}
+
+
+

@@ -1,4 +1,6 @@
 class CommentsController < ApplicationController
+  before_action :authenticate_user!, only: :create
+
   def create
     Comment.create(comment_params)
     redirect_to root_path

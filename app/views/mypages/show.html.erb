@@ -1,6 +1,9 @@
 <%= render "devise/shared/header" %>
 
 <div class="contents-page">
+  
+  <%= render "profiles/show" %>
+
   <div class="content-page"><%= @name %>さんのコーデ一覧</div>
 
   <% @codes.each do |code| %>
@@ -20,7 +23,8 @@
       <%= simple_format code.brand_name %>
     </div>
   <% end %>
-    <%=link_to 'もどる', root_path, class:"root-back-btn" %>
+    <%=link_to 'もどる', root_path, class:"root-back-button" %>
+    <%=link_to 'Dm', new_room_path, class:"messages-button" if current_user.name != @name %>
    <div>
     <audio autoplay src="https://res.cloudinary.com/dr47riclr/video/upload/v1629117741/music/Gm_Code2_zbd0rl.mp3"></audio>
   </div>
