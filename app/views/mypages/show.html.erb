@@ -24,7 +24,8 @@
     </div>
   <% end %>
     <%=link_to 'もどる', root_path, class:"root-back-button" %>
-    <%=link_to 'Dm', new_room_path, class:"messages-button" if current_user.name != @name %>
+    <%=link_to 'Dm', new_room_path, class:"messages-button" if current_user.id != @id %>
+    <%=link_to "編集", edit_profile_path , class: 'edit-profile' if current_user.id == @id %>
    <div>
     <audio autoplay src="https://res.cloudinary.com/dr47riclr/video/upload/v1629117741/music/Gm_Code2_zbd0rl.mp3"></audio>
   </div>
