@@ -2,7 +2,7 @@
   border: 1px solid	#CCCCCC ;
   background-color:	#CCCCCC ;
   color: #FFFFEE ;
-  padding: 11px 43px ;
+  padding: 10px 41px ;
   text-decoration: none ;
   border-radius: 80% ;
   text-align: center ;
@@ -23,7 +23,16 @@
   background-color: #FFFFFF;
   text-align: start;
   border: 1px solid #111111;
-  padding: 3px 100px 3px 0;
+  padding: 3px 8vw 3px 3px;
+  width: 24vw;
+}
+
+.table-form-comment{
+  background-color: #FFFFFF;
+  text-align: start;
+  border: 1px solid #111111;
+  padding: 15px 8vw 15px 3px;
+  width: 24vw;
 }
 
 
@@ -60,6 +69,5 @@
   font-size: 15px;
   resize: none;
 }
-
 
 

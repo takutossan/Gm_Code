@@ -12,27 +12,27 @@
           </tr>
           <tr>
             <th class="table-list">誕生日</th>
-              <td class ="table-form"><%= current_user.birthday %></td>
+              <td class ="table-form"><%= @birthday %></td>
           </tr>
           <tr>
             <th class="table-list">好きなブランド</th>
-              <td class ="table-form"><%= current_user.favorite_brand %></td>
+              <td class ="table-form"><%= @favorite_brand %></td>
           </tr>
             <th class="table-list">自己紹介</th>
-              <td class ="table-form"><%= current_user.comment %></td>
+              <td class ="table-form-comment"><%= @comment %></td>
           </tr>
           <div class = "sns-link">
           <ul class="profile-links">
-            <% if current_user.twitter.present? %>
+            <% if @twitter.present? %>
               <li class="profile-link">
-                <%= link_to current_user.twitter, target: :_blank do %>
+                <%= link_to @twitter, target: :_blank do %>
                   <i class="fab fa-twitter-square"></i>
                 <% end %>
               </li>
             <% end %>
-            <% if current_user.instagram.present? %>
+            <% if @instagram.present? %>
               <li class="profile-link">
-                <%= link_to current_user.instagram, target: :_blank do %>
+                <%= link_to @instagram, target: :_blank do %>
                   <i class="fab fa-instagram"></i>
                 <% end %>
               </li>
@@ -42,6 +42,5 @@
         </tbody>
       </table>
     </div>
-    <%=link_to "編集", edit_profile_path, class: 'edit-profile' if current_user.name == @name %>
   </div>
 </div>
