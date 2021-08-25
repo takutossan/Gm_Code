@@ -4,7 +4,6 @@ class CodesController < ApplicationController
 
   def index
     @code = Code.all.order('created_at DESC')
-    @codes = Code.page params[:page]
   end
 
   def new
