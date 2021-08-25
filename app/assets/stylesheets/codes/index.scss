@@ -97,7 +97,7 @@
 }
 
 .announces{
-  display: flex;
+  display: block;
   flex-direction: column ;
 }
 
@@ -105,4 +105,21 @@
   padding: 50px 0px 30px 0 ;
   font-size: 32px ;
   font-weight: bolder ;
+}
+
+.announce-date{
+  text-align: start;
+  padding: 6px 3px 6px 15px;
+  font-size: 20px;
+}
+
+.announce{
+  text-align: start;
+  padding: 6px 0 6px 15px;
+  width: 26vw;
+}
+
+.movie-announce{
+  padding: 50px 23vw 0 0;
+  font-size: 18px;
 }
