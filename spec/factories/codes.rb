@@ -1,9 +1,8 @@
 FactoryBot.define do
   factory :code do
-    code_title { Faker::Lorem.sentence }
-    brand_name { Faker::Lorem.sentence }
+    code_title { "Alice" }
+    brand_name { "Alice" }
     message { Faker::Lorem.sentence }
-    user { Faker::Name.user }
     association :user
 
     after(:build) do |code|

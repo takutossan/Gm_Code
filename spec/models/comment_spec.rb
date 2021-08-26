@@ -8,15 +8,15 @@ RSpec.describe Comment, type: :model do
     describe 'コメント投稿機能' do
       context 'コメントが投稿できる時' do
         it 'codeが存在すれば投稿できる' do
-          expect(@code).to be_valid
+          expect(@comment).to be_valid
         end
       end
 
       context 'コメント投稿ができないとき' do
-        it 'commentが空だと登録できない' do
-          @code.comment = ''
-          @code.valid?
-          expect(@code.errors.full_messages).to include "Comment can't be blank"
+        it 'textが空だと登録できない' do
+          @comment.text = ''
+          @comment.valid?
+          expect(@comment.errors.full_messages).to include "Commentがありません"
         end
       end
     end

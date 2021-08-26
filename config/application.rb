@@ -12,6 +12,10 @@ module GmCode
     config.load_defaults 6.1
     config.i18n.default_locale = :ja
     config.time_zone = 'Tokyo'
+    config.generators do |g|
+      g.factory_bot false
+      g.factory_bot dir: 'custom/dir/for/factories'
+    end
 
     # Configuration for the application, engines, and railties goes here.
     #
